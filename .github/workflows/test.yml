@@ -36,9 +36,9 @@ jobs:
         with:
           version: v0.30.0
       - name: Get the version
-        run: stackit --version |& grep 0.30.0
+        run: stackit --version | grep 0.30.0
       - uses: ./
         with:
           version: 0.28.0
       - name: Get the version
-        run: stackit --version |& grep 0.28.0
+        run: stackit --version | grep 0.28.0

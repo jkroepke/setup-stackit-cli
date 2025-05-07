@@ -20,4 +20,4 @@ changelog:
         - 📖 docs
     - title: Other Changes
       labels:
-        - "*"
+        - '*'
