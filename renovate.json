@@ -4,6 +4,8 @@
   "labels": ["🛠️ dependencies"],
   "timezone": "Europe/Berlin",
   "schedule": ["* 14-17 * * 5"],
+  "automerge": true,
+  "platformAutomerge": true,
   "packageRules": [
     {
       "groupName": "golangci-lint",
@@ -23,7 +25,8 @@
       "matchManagers": ["npm"],
       "enabled": true,
       "separateMajorMinor": true,
-      "separateMultipleMajor": true
+      "separateMultipleMajor": true,
+      "postUpdateOptions": "npmDedupe"
     },
     {
       "groupName": "GitHub Actions",
