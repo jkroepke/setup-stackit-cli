@@ -43,7 +43,7 @@ jobs:
         #language=bash
         run: |
           # Define the target directory
-          TARGET_DIR="$CHART"
+          TARGET_DIR="."
           
           # Fetch deleted files in the target directory
           DELETED_FILES=$(git diff --diff-filter=D --name-only HEAD -- "$TARGET_DIR")
