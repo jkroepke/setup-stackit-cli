@@ -58,19 +58,19 @@ jobs:
           echo '{ "deletions": [], "additions": [] }' > "$FILE_CHANGES_JSON_FILE"
           
           # Add deletions
-          for file in $DELETED_FILES; do
+          git diff --diff-filter=D --name-only HEAD -- "$TARGET_DIR" | while read -r file; do
             jq --arg path "$file" '.deletions += [{"path": $path}]' "$FILE_CHANGES_JSON_FILE" > "$FILE_CHANGES_JSON_FILE.tmp"
             mv "$FILE_CHANGES_JSON_FILE.tmp" "$FILE_CHANGES_JSON_FILE"
           done
           
           # Add additions (new or modified files)
-          for file in $MODIFIED_FILES; do
-            BASE64_CONTENT=$(base64 -w 0 <"$file")  # Encode file content
+          git diff --diff-filter=ACM --name-only HEAD -- "$TARGET_DIR" | while read -r file; do
+            BASE64_CONTENT=$(base64 -w 0 <"$file")
             jq --arg path "$file" --arg content "$BASE64_CONTENT" \
               '.additions += [{"path": $path, "contents": $content}]' "$FILE_CHANGES_JSON_FILE" > "$FILE_CHANGES_JSON_FILE.tmp"
             mv "$FILE_CHANGES_JSON_FILE.tmp" "$FILE_CHANGES_JSON_FILE"
           done
-          
+                
           # Create a temporary file for the final JSON payload
           JSON_PAYLOAD_FILE=$(mktemp)
           
