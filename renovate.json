@@ -27,7 +27,7 @@
       "enabled": true,
       "separateMajorMinor": true,
       "separateMultipleMajor": true,
-      "postUpdateOptions": "npmDedupe"
+      "postUpdateOptions": ["npmDedupe"]
     },
     {
       "groupName": "GitHub Actions",
