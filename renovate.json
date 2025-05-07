@@ -6,6 +6,7 @@
   "schedule": ["* 14-17 * * 5"],
   "automerge": true,
   "platformAutomerge": true,
+  "suppressNotifications": ["prEditedNotification"],
   "packageRules": [
     {
       "groupName": "golangci-lint",
