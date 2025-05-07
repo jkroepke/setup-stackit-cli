@@ -1,4 +1,4 @@
-![build-test](https://github.com/jkroepke/setup-vals/workflows/build-test/badge.svg)
+[![CI](https://github.com/jkroepke/setup-stackit-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/jkroepke/setup-stackit-cli/actions/workflows/ci.yml)
 
 ## Setup stackit-cli
 
@@ -20,4 +20,4 @@ to define which version of sops will be used.
 The cached vals binary path is prepended to the PATH environment variable as
 well as stored in the vals-path output variable. Refer to the action metadata
 file for details about all the inputs
-[here](https://github.com/jkroepke/setup-stackit-cli/blob/master/action.yml).
+[here](https://github.com/jkroepke/setup-stackit-cli/blob/main/action.yml).
