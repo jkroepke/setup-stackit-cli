@@ -68,13 +68,10 @@ jobs:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_BASH: true
           VALIDATE_BASH_EXEC: true
-          VALIDATE_EDITORCONFIG: true
           VALIDATE_ENV: true
           VALIDATE_GITHUB_ACTIONS: true
           VALIDATE_HTML: true
-          # VALIDATE_JSON: true
           VALIDATE_NATURAL_LANGUAGE: true
-          # VALIDATE_RENOVATE: true
           VALIDATE_SHELL_SHFMT: true
           VALIDATE_XML: true
           VALIDATE_YAML: true
