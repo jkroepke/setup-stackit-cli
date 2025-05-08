@@ -12,9 +12,9 @@
 GitHub Action for installing
 [stackitcloud/stackit-cli](https://github.com/stackitcloud/stackit-cli)
 
-Install a specific version of stackit-cli binary on the runner.
-Acceptable values are latest or any semantic version string like v2.16.7.
-Use this action in workflow to define which version of stackit-cli will be used.
+Install a specific version of stackit-cli binary on the runner. Acceptable
+values are latest or any semantic version string like v2.16.7. Use this action
+in workflow to define which version of stackit-cli will be used.
 
 ```yaml
 - name: Stackit Binary Installer
