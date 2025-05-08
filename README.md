@@ -3,7 +3,11 @@
 [![Current Release](https://img.shields.io/github/release/jkroepke/setup-stackit-cli.svg?logo=github)](https://github.com/jkroepke/setup-stackit-cli/releases/latest)
 [![GitHub Repo stars](https://img.shields.io/github/stars/jkroepke/setup-stackit-cli?style=flat&logo=github)](https://github.com/jkroepke/setup-stackit-cli/stargazers)
 
-## Setup stackit-cli
+# Setup stackit-cli
+
+⭐ Don't forget to star this repository! ⭐
+
+## About
 
 GitHub Action for installing
 [stackitcloud/stackit-cli](https://github.com/stackitcloud/stackit-cli)
