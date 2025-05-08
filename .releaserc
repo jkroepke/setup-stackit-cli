@@ -11,7 +11,8 @@
     [
       '@semantic-release/github',
       {
-        successComment: false,
+        successCommentCondition: false,
+        failCommentCondition: false,
         labels: false,
         addReleases: false
       }
