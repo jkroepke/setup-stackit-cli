@@ -23,8 +23,8 @@ jobs:
           private-key: ${{ secrets.APP_RENOVATE_HELPER_PRIVATE_KEY }}
       - uses: srvaroa/labeler@v1
         if: >-
-          !contains(github.event.pull_request.labels.*.name, '💥 breaking-change')
-          && !contains(github.event.pull_request.labels.*.name, '✨ enhancement') &&
+          !contains(github.event.pull_request.labels.*.name, '💥 breaking-change') &&
+          !contains(github.event.pull_request.labels.*.name, '✨ enhancement') &&
           !contains(github.event.pull_request.labels.*.name, '🐞 bug') &&
           !contains(github.event.pull_request.labels.*.name, '📖 docs') &&
           !contains(github.event.pull_request.labels.*.name, 'chore') &&
@@ -37,10 +37,9 @@ jobs:
     steps:
       - name: check
         if: >-
-          !contains(github.event.pull_request.labels.*.name, '💥
-          breaking-change') &&
-          !contains(github.event.pull_request.labels.*.name, '✨ enhancement')
-          && !contains(github.event.pull_request.labels.*.name, '🐞 bug') &&
+          !contains(github.event.pull_request.labels.*.name, '💥 breaking-change') &&
+          !contains(github.event.pull_request.labels.*.name, '✨ enhancement') &&
+          !contains(github.event.pull_request.labels.*.name, '🐞 bug') &&
           !contains(github.event.pull_request.labels.*.name, '📖 docs') &&
           !contains(github.event.pull_request.labels.*.name, 'chore') &&
           !contains(github.event.pull_request.labels.*.name, '🛠️ dependencies')
