@@ -1,11 +1,13 @@
 name: ❓ Question
 description: Something is not clear.
-labels: [ ❓ question ]
+labels: [❓ question]
 body:
   - type: textarea
     attributes:
       label: Problem Statement
-      description: Without specifying a solution, describe what the project is missing today.
+      description:
+        Without specifying a solution, describe what the project is missing
+        today.
       placeholder: |
         The rotating project logo has a fixed size and color.
         There is no way to make it larger and more shiny.
@@ -24,7 +26,9 @@ body:
 
   - type: markdown
     attributes:
-      value: Please not that openvpn-auth-oauth2 requires an OpenVPN server version 2.6.2 or higher.
+      value:
+        Please not that openvpn-auth-oauth2 requires an OpenVPN server version
+        2.6.2 or higher.
 
   - type: textarea
     attributes:
