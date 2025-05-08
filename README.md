@@ -1,7 +1,7 @@
 [![CI](https://github.com/jkroepke/setup-stackit-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/jkroepke/setup-stackit-cli/actions/workflows/ci.yml)
-[![GitHub license](https://img.shields.io/github/license/jkroepke/setup-stackit-cli/)](https://github.com/jkroepke/setup-stackit-cli/blob/master/LICENSE.txt)
-[![Current Release](https://img.shields.io/github/release/jkroepke/setup-stackit-cli/.svg?logo=github)](https://github.com/jkroepke/setup-stackit-cli/releases/latest)
-[![GitHub Repo stars](https://img.shields.io/github/stars/jkroepke/setup-stackit-cli/?style=flat&logo=github)](https://github.com/jkroepke/setup-stackit-cli/stargazers)
+[![GitHub license](https://img.shields.io/github/license/jkroepke/setup-stackit-cli)](https://github.com/jkroepke/setup-stackit-cli/blob/master/LICENSE)
+[![Current Release](https://img.shields.io/github/release/jkroepke/setup-stackit-cli.svg?logo=github)](https://github.com/jkroepke/setup-stackit-cli/releases/latest)
+[![GitHub Repo stars](https://img.shields.io/github/stars/jkroepke/setup-stackit-cli?style=flat&logo=github)](https://github.com/jkroepke/setup-stackit-cli/stargazers)
 
 ## Setup stackit-cli
 
