@@ -17,7 +17,7 @@ to define which version of sops will be used.
   id: install
 ```
 
-The cached vals binary path is prepended to the PATH environment variable as
-well as stored in the vals-path output variable. Refer to the action metadata
+The cached binary path is prepended to the PATH environment variable as
+well as stored in the path output variable. Refer to the action metadata
 file for details about all the inputs
 [here](https://github.com/jkroepke/setup-stackit-cli/blob/main/action.yml).
