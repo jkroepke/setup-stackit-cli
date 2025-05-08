@@ -12,25 +12,26 @@ jobs:
   add-labels:
     runs-on: ubuntu-latest
     if: >-
-      !contains(github.event.pull_request.labels.*.name, '💥 breaking-change') &&
-      !contains(github.event.pull_request.labels.*.name, '✨ enhancement') &&
+      !contains(github.event.pull_request.labels.*.name, '💥 breaking-change')
+      && !contains(github.event.pull_request.labels.*.name, '✨ enhancement') &&
       !contains(github.event.pull_request.labels.*.name, '🐞 bug') &&
       !contains(github.event.pull_request.labels.*.name, '📖 docs') &&
       !contains(github.event.pull_request.labels.*.name, 'chore') &&
       !contains(github.event.pull_request.labels.*.name, '🛠️ dependencies')
     steps:
-      - uses: srvaroa/labeler@master
+      - uses: srvaroa/labeler@v1
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
   validate-labels:
     name: check labels missing
     runs-on: ubuntu-latest
     steps:
       - name: check
         if: >-
-          !contains(github.event.pull_request.labels.*.name, '💥 breaking-change') &&
-          !contains(github.event.pull_request.labels.*.name, '✨ enhancement') &&
-          !contains(github.event.pull_request.labels.*.name, '🐞 bug') &&
+          !contains(github.event.pull_request.labels.*.name, '💥
+          breaking-change') &&
+          !contains(github.event.pull_request.labels.*.name, '✨ enhancement')
+          && !contains(github.event.pull_request.labels.*.name, '🐞 bug') &&
           !contains(github.event.pull_request.labels.*.name, '📖 docs') &&
           !contains(github.event.pull_request.labels.*.name, 'chore') &&
           !contains(github.event.pull_request.labels.*.name, '🛠️ dependencies')
