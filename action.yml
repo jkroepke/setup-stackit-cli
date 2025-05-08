@@ -2,8 +2,6 @@ name: 'stackit-cli tools installer'
 description: |-
   Install a specific version of the stackit-cli binary. Acceptable values are latest
   or any semantic version string like 0.31.0.
-
-  https://github.com/stackitcloud/stackit-cli
 inputs:
   version:
     description: 'Version of stackit-cli'
