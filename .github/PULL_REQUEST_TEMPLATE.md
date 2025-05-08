@@ -20,5 +20,6 @@ Complete these before marking the PR as `ready to review`:
 - [ ] [DCO](https://github.com/prometheus-community/helm-charts/blob/main/CONTRIBUTING.md#sign-off-your-work)
       signed
 - [ ] The PR title has a summary of the changes
+- [ ] The PR title begins with `feat:`, `fix:` or `chore:`
 - [ ] The PR body has a summary to reflect any significant (and particularly
       user-facing) changes introduced by this PR

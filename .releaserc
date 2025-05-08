@@ -1,14 +1,11 @@
-/**
- * @type {import('semantic-release').GlobalConfig}
- */
-export default {
+{
   branches: ['main'],
   plugins: [
     [
       '@semantic-release/commit-analyzer',
       {
         preset: 'angular',
-        releaseRules: [{ type: 'chore', scope: 'deps', release: 'patch' }]
+        releaseRules: [{ type: 'chore', scope: 'deps', release: 'patch' },{ type: 'chore', scope: 'fix', release: 'patch' }]
       }
     ],
     [
