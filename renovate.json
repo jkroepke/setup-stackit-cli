@@ -8,6 +8,7 @@
   "platformAutomerge": true,
   "suppressNotifications": ["prEditedNotification"],
   "semanticCommits": "enabled",
+  "ignorePaths": ["/dist/**"],
   "packageRules": [
     {
       "groupName": "golangci-lint",
