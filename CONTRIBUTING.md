@@ -9,8 +9,9 @@ This project uses GitHub to manage reviews of pull requests.
   description of the pull request.
 
 - If you plan to do something more involved, first discuss your ideas as
-  [GitHub issue](https://github.com/jkroepke/setup-stackit-cli/issues). This will avoid
-  unnecessary work and surely give you and us a good deal of inspirations.
+  [GitHub issue](https://github.com/jkroepke/setup-stackit-cli/issues). This
+  will avoid unnecessary work and surely give you and us a good deal of
+  inspirations.
 
 - Be sure to sign off on the [DCO](https://github.com/probot/dco#how-it-works).
 
