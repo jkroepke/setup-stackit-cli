@@ -8,9 +8,13 @@ on:
       - labeled
       - unlabeled
 
+permissions: {}
+
 jobs:
   add-labels:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - uses: srvaroa/labeler@v1
         if: >-
