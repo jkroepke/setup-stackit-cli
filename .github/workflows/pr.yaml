@@ -26,7 +26,7 @@ jobs:
         with:
           app-id: 1248576
           private-key: ${{ secrets.APP_RENOVATE_HELPER_PRIVATE_KEY }}
-      - uses: srvaroa/labeler@v1
+      - uses: srvaroa/labeler@0a20eccb8c94a1ee0bed5f16859aece1c45c3e55 # v1.13.0
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
   validate-labels:
