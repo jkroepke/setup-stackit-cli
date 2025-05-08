@@ -13,8 +13,13 @@ permissions: {}
 jobs:
   add-labels:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
+    if: >-
+      !contains(github.event.pull_request.labels.*.name, '💥 breaking-change') &&
+      !contains(github.event.pull_request.labels.*.name, '✨ enhancement') &&
+      !contains(github.event.pull_request.labels.*.name, '🐞 bug') &&
+      !contains(github.event.pull_request.labels.*.name, '📖 docs') &&
+      !contains(github.event.pull_request.labels.*.name, 'chore') &&
+      !contains(github.event.pull_request.labels.*.name, '🛠️ dependencies')
     steps:
       - uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e # v2.0.6
         id: app-token
@@ -22,13 +27,6 @@ jobs:
           app-id: 1248576
           private-key: ${{ secrets.APP_RENOVATE_HELPER_PRIVATE_KEY }}
       - uses: srvaroa/labeler@v1
-        if: >-
-          !contains(github.event.pull_request.labels.*.name, '💥 breaking-change') &&
-          !contains(github.event.pull_request.labels.*.name, '✨ enhancement') &&
-          !contains(github.event.pull_request.labels.*.name, '🐞 bug') &&
-          !contains(github.event.pull_request.labels.*.name, '📖 docs') &&
-          !contains(github.event.pull_request.labels.*.name, 'chore') &&
-          !contains(github.event.pull_request.labels.*.name, '🛠️ dependencies')
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
   validate-labels:
