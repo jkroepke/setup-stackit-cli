@@ -26,7 +26,7 @@ jobs:
         id: app-token
         with:
           app-id: 1248576
-          private-key: ${{ secrets.APP_RENOVATE_HELPER_PRIVATE_KEY }}
+          private-key: ${{ secrets.AUTOMATION_APP_PRIVATE_KEY }}
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
@@ -82,11 +82,11 @@ jobs:
                 --slurpfile fileChanges "$FILE_CHANGES_JSON_FILE" \
                 '{
                   query: "mutation ($input: CreateCommitOnBranchInput!) {
-                    createCommitOnBranch(input: $input) { 
-                      commit { 
-                        url 
-                      } 
-                    } 
+                    createCommitOnBranch(input: $input) {
+                      commit {
+                        url
+                      }
+                    }
                   }",
                   variables: {
                     input: {
