@@ -62,21 +62,19 @@ jobs:
       - name: Lint Code Base
         uses: super-linter/super-linter/slim@4e8a7c2bf106c4c766c816b35ec612638dc9b6b2 # v7.3.0
         env:
-          EDITORCONFIG_FILE_NAME: .editorconfig-checker.json
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MULTI_STATUS: false
+          LOG_LEVEL: info
           LINTER_RULES_PATH: .
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_BASH: true
           VALIDATE_BASH_EXEC: true
           VALIDATE_EDITORCONFIG: true
           VALIDATE_ENV: true
-          # VALIDATE_GO_RELEASER: true
           VALIDATE_GITHUB_ACTIONS: true
           VALIDATE_HTML: true
           VALIDATE_JSON: true
           VALIDATE_NATURAL_LANGUAGE: true
-          # VALIDATE_MARKDOWN: false
           VALIDATE_RENOVATE: true
           VALIDATE_SHELL_SHFMT: true
           VALIDATE_XML: true
