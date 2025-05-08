@@ -3,11 +3,15 @@ on:
   release:
     types: [published]
 
+permissions: {}
+
 jobs:
   regenerate:
     if: github.repository_owner == 'jkroepke'
     name: 'regenerate'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Update notes
         run: |
