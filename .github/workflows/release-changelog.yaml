@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Update notes
         run: |
-          NEW_NOTES=$(gh api --method POST -H "Accept: application/vnd.github+json" /repos/${{ github.repository_owner }}/${{ github.repository }}/releases/generate-notes  -f tag_name=$RELEASE_TAG | jq -r '.body')
-          RELEASE_ID=$(gh api -H "Accept: application/vnd.github+json" /repos/${{ github.repository_owner }}/${{ github.repository }}/releases/tags/$RELEASE_TAG | jq -r '.id')
+          NEW_NOTES=$(gh api --method POST -H "Accept: application/vnd.github+json" /repos/${{ github.repository_owner }}/${{ github.repository }}/releases/generate-notes  -f tag_name=${{ github.ref }} | jq -r '.body')
+          RELEASE_ID=$(gh api -H "Accept: application/vnd.github+json" /repos/${{ github.repository_owner }}/${{ github.repository }}/releases/tags/${{ github.ref }} | jq -r '.id')
           gh api --method PATCH -H "Accept: application/vnd.github+json" /repos/${{ github.repository_owner }}/${{ github.repository }}/releases/$RELEASE_ID -f body=$NEW_NOTES
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
