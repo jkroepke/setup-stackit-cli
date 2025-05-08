@@ -1,0 +1,10 @@
+version: 1
+labels:
+  - label: "chore"
+    title: "^chore:.*"
+  - label: "🐞 bug"
+    title: "^fix:.*"
+  - label: "✨ enhancement"
+    title: "^feat:.*"
+  - label: "📖 docs"
+    title: "^docs:.*"
