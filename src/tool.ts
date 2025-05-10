@@ -1,5 +1,5 @@
 import { clean } from 'semver'
-import { extractTar } from '@actions/tool-cache'
+import { extractTar, extractZip } from '@actions/tool-cache'
 
 export const toolName = 'stackit'
 export const githubRepository = 'stackitcloud/stackit-cli'
@@ -19,7 +19,17 @@ export async function extractBinary(
   os: string,
   _arch: string
 ): Promise<string> {
-  const extractedFolder = await extractTar(path)
+  let extractedFolder
+
+  if (os === 'windows') {
+    extractedFolder = await extractZip(path)
+  } else {
+    extractedFolder = await extractTar(path)
+  }
 
   return `${extractedFolder}/${toolName}${os === 'windows' ? '.exe' : ''}`
+}
+
+export function getVersionArguments(): string[] {
+  return ['--version']
 }
