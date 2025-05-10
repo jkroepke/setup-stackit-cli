@@ -1,2 +1,4 @@
-npm run all
+npm run format:write
+npm run lint
+npm run package
 git update-index --again
