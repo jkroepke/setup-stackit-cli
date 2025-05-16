@@ -12,11 +12,7 @@
   "packageRules": [
     {
       "groupName": "golangci-lint",
-      "matchPackageNames": [
-        "github.com/golangci/golangci-lint/cmd/golangci-lint",
-        "golangci/golangci-lint",
-        "golangci/golangci-lint-action"
-      ]
+      "matchPackageNames": ["github.com/golangci/golangci-lint/cmd/golangci-lint", "golangci/golangci-lint", "golangci/golangci-lint-action"]
     },
     {
       "matchManagers": ["gomod"],
@@ -25,7 +21,7 @@
     },
     {
       "groupName": "dependencies",
-      "matchManagers": ["npm", "regex"],
+      "matchManagers": ["npm", "custom.regex"],
       "enabled": true,
       "separateMajorMinor": true,
       "separateMultipleMajor": true,
