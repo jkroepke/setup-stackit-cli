@@ -24,8 +24,8 @@
       "enabled": true
     },
     {
-      "groupName": "node dependencies",
-      "matchManagers": ["npm"],
+      "groupName": "dependencies",
+      "matchManagers": ["npm", "regex"],
       "enabled": true,
       "separateMajorMinor": true,
       "separateMultipleMajor": true,
