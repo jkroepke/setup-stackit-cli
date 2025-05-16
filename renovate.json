@@ -12,7 +12,7 @@
   "packageRules": [
     {
       "groupName": "golangci-lint",
-      "matchPackageNames": [        
+      "matchPackageNames": [
         "github.com/golangci/golangci-lint/cmd/golangci-lint",
         "golangci/golangci-lint",
         "golangci/golangci-lint-action"
