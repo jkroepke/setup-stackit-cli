@@ -25,7 +25,7 @@
     },
     {
       "groupName": "dependencies",
-      "matchManagers": ["npm", "regex"],
+      "matchManagers": ["npm", "custom.regex"],
       "enabled": true,
       "separateMajorMinor": true,
       "separateMultipleMajor": true,
