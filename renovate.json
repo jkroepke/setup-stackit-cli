@@ -3,7 +3,7 @@
   "extends": ["config:recommended", "helpers:pinGitHubActionDigestsToSemver"],
   "labels": ["🛠️ dependencies"],
   "timezone": "Europe/Berlin",
-  "schedule": ["* 14-17 * * 5"],
+  "schedule": ["* 10-20 * * 5"],
   "automerge": true,
   "platformAutomerge": true,
   "suppressNotifications": ["prEditedNotification"],
