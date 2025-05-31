@@ -38,7 +38,7 @@
     },
     {
       "groupName": "dev dependencies",
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["devDependencies", "optionalDependencies"],
       "matchManagers": ["npm"],
       "semanticCommitScope": "dev"
     },
