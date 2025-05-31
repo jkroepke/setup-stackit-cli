@@ -37,6 +37,12 @@
       "semanticCommitScope": "github-actions"
     },
     {
+      "groupName": "dev dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchManagers": ["npm"],
+      "semanticCommitScope": "dev"
+    },
+    {
       "groupName": "golang.org/x/",
       "matchPackageNames": ["golang.org/x/*"]
     },
