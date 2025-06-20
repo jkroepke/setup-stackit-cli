@@ -33367,7 +33367,7 @@ var semverExports = requireSemver();
 const toolName = 'stackit';
 const githubRepository = 'stackitcloud/stackit-cli';
 // renovate: github=stackitcloud/stackit-cli
-const defaultVersion = 'v0.33.1';
+const defaultVersion = 'v0.34.5';
 function binaryName(version, os, arch) {
     version = semverExports.clean(version) || version;
     return `stackit-cli_${version}_${os}_${arch}.${os === 'windows' ? 'zip' : 'tar.gz'}`;
