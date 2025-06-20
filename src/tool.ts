@@ -5,7 +5,7 @@ export const toolName = 'stackit'
 export const githubRepository = 'stackitcloud/stackit-cli'
 
 // renovate: github=stackitcloud/stackit-cli
-export const defaultVersion = 'v0.33.1'
+export const defaultVersion = 'v0.34.5'
 
 export function binaryName(version: string, os: string, arch: string): string {
   version = clean(version) || version
