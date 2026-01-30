@@ -7,10 +7,10 @@
   "author": "Jan-Otto Kröpke",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "2.0.2",
+    "@actions/core": "2.0.3",
     "@actions/exec": "2.0.0",
-    "@actions/http-client": "3.0.1",
-    "@actions/tool-cache": "3.0.0",
+    "@actions/http-client": "3.0.2",
+    "@actions/tool-cache": "3.0.1",
     "semver": "7.7.3"
   },
   "engines": {
