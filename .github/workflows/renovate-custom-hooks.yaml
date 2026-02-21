@@ -1,5 +1,7 @@
 name: renovate hooks
 
+permissions: {}
+
 on:
   pull_request:
     branches:
@@ -13,6 +15,8 @@ jobs:
   renovate-post-run:
     name: Renovate Post Upgrade Hook
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     if: github.repository_owner == 'jkroepke' && (github.actor == 'renovate[bot]' || github.actor == 'mend[bot]')
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -104,8 +108,8 @@ jobs:
 
           # Call GitHub API
           curl https://api.github.com/graphql -f \
-            -sSf -H "Authorization: Bearer $GITHUB_TOKEN" \
-            --data "@$JSON_PAYLOAD_FILE"
+               -sSf -H "Authorization: Bearer $GITHUB_TOKEN" \
+               --data "@$JSON_PAYLOAD_FILE"
 
           # Clean up temporary files
           rm "$FILE_CHANGES_JSON_FILE" "$JSON_PAYLOAD_FILE"
