@@ -33290,8 +33290,10 @@ async function download(version) {
         try {
             downloadPath = await downloadTool(url);
         }
-        catch (exception) {
-            throw new Error(`Failed to download ${toolName} from location ${url}. Error: ${exception}`);
+        catch (error) {
+            throw new Error(`Failed to download ${toolName} from location ${url}.`, {
+                cause: error
+            });
         }
         const extractedPath = await extractBinary(downloadPath, version, runnerOs);
         await fs__default.promises.chmod(extractedPath, 0o777);
