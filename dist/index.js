@@ -30404,7 +30404,15 @@ function requireFetch () {
 	          const headersList = new HeadersList();
 
 	          for (let i = 0; i < rawHeaders.length; i += 2) {
-	            headersList.append(bufferToLowerCasedHeaderName(rawHeaders[i]), rawHeaders[i + 1].toString('latin1'), true);
+	            const nameStr = bufferToLowerCasedHeaderName(rawHeaders[i]);
+	            const value = rawHeaders[i + 1];
+	            if (Array.isArray(value) && !Buffer.isBuffer(rawHeaders[i + 1])) {
+	              for (const val of value) {
+	                headersList.append(nameStr, val.toString('latin1'), true);
+	              }
+	            } else {
+	              headersList.append(nameStr, value.toString('latin1'), true);
+	            }
 	          }
 	          const location = headersList.get('location', true);
 
@@ -30573,7 +30581,15 @@ function requireFetch () {
 	          const headersList = new HeadersList();
 
 	          for (let i = 0; i < rawHeaders.length; i += 2) {
-	            headersList.append(bufferToLowerCasedHeaderName(rawHeaders[i]), rawHeaders[i + 1].toString('latin1'), true);
+	            const nameStr = bufferToLowerCasedHeaderName(rawHeaders[i]);
+	            const value = rawHeaders[i + 1];
+	            if (Array.isArray(value) && !Buffer.isBuffer(rawHeaders[i + 1])) {
+	              for (const val of value) {
+	                headersList.append(nameStr, val.toString('latin1'), true);
+	              }
+	            } else {
+	              headersList.append(nameStr, value.toString('latin1'), true);
+	            }
 	          }
 
 	          resolve({
@@ -42185,7 +42201,7 @@ function _getGlobal(key, defaultValue) {
 const toolName = 'stackit';
 const githubRepository = 'stackitcloud/stackit-cli';
 // renovate: github=stackitcloud/stackit-cli
-const defaultVersion = 'v0.58.0';
+const defaultVersion = 'v0.59.0';
 function binaryName(version, os, arch) {
     version = semverExports.clean(version) || version;
     return `stackit-cli_${version}_${os}_${arch}.${os === 'windows' ? 'zip' : 'tar.gz'}`;
