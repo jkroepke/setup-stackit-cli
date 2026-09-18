@@ -45880,7 +45880,7 @@ function _getGlobal(key, defaultValue) {
 const toolName = 'stackit';
 const githubRepository = 'stackitcloud/stackit-cli';
 // renovate: github=stackitcloud/stackit-cli
-const defaultVersion = 'v0.72.0';
+const defaultVersion = 'v0.73.0';
 function binaryName(version, os, arch) {
     version = semverExports.clean(version) || version;
     return `stackit-cli_${version}_${os}_${arch}.${os === 'windows' ? 'zip' : 'tar.gz'}`;
